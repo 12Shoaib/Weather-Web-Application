@@ -11,7 +11,7 @@ const Searchbar = (props) => {
     }
     return (
         <div className={searchbar.mainComponent}>
-            <input onChange={captureValue} placeholder='Search here...!' className={searchbar.searchbar} type='text' />
+            <input onChange={captureValue} placeholder='Search with place name...!' className={searchbar.searchbar} type='text' />
             <button onClick={props.onClick} className={searchbar.iconWrapper}><BsSearch className={searchbar.searchIcon}/></button>
 
         </div>

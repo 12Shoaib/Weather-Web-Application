@@ -9,3 +9,7 @@ export const apiDetails = atom({
     key:'fetched',
     default:[]
 })
+export const isLoader = atom({
+    key:'loader',
+    default:false
+})
