@@ -1,0 +1,24 @@
+.mainComponent{
+    width: 100vw;
+    height: 5rem;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    color: black;
+    padding-left: 3rem;
+}
+.heading{
+    padding: 0px;
+    margin: 0px;
+    color: rgb(255, 255, 0);
+    font-weight: bold;
+    font-size: 2rem;
+}
+.icon{
+    color: yellow;
+    font-size: 5rem;
+    padding: 0px;
+    margin: 0px;
+
+}
+

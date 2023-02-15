@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './app.css'
+import Navbar from './Components/Navbar/Navbar'
+import Searchbar  from './Components/Searchbar/Searchbar'
+import Card from './Components/Cards/Card'
+import {useRecoilState, useRecoilValue } from 'recoil';
+import {inputValue , apiDetails} from './Recoil/Atom'
 
-function App() {
+
+const App = () => {
+      const [fetchedDetails , setFetchedDetails] = useRecoilState(apiDetails)
+      const input = useRecoilValue(inputValue)
+      const url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' +`${input}`+ '?unitGroup=us&key=S83L853MMYAEJMBJJCL7CJBJQ&contentType=json'
+      // console.log(url)
+
+      async function getWeatherReport(){
+        const response = await fetch(url)
+        const data = await response.json()
+        setFetchedDetails(data)
+      }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='mainComponent'>
+      <Navbar />
+      <Searchbar onClick={getWeatherReport} />
+      <Card/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

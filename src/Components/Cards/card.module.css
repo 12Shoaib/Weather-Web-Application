@@ -1,0 +1,54 @@
+.mainComponent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14rem;  
+}
+.cardContainer{
+    border: 1px solid black;
+    height: 12rem;
+    width: 18rem;
+    background-color: transparent;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.251);
+}
+.locationName{
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+}
+.logo{
+    font-size: 2rem;
+    color: yellow;
+}
+.value{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+.description{
+    font-size: 1.2rem;
+    color:rgb(62, 55, 55);
+    margin: 0px;
+    padding: 0px;
+}
+.subHeading{
+    font-size: 1.2rem;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+.resolvedAdress{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+
+}
